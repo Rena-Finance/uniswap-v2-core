@@ -176,8 +176,8 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
         _burn(address(this), liquidity);
         _safeTransfer(token0_, to, amount0);
         _safeTransfer(token1_, to, amount1);
-        balance0 = IERC20(token0_)._balanceOf(address(this));
-        balance1 = IERC20(token1_)._balanceOf(address(this));
+        balance0 = IERC20(token0_).balanceOf(address(this));
+        balance1 = IERC20(token1_).balanceOf(address(this));
 
         _update(balance0, balance1, _reserve0, _reserve1);
         if (feeOn) _kLast = uint(reserve0).mul(reserve1); // reserve0 and reserve1 are up-to-date
