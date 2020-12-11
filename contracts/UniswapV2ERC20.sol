@@ -10,7 +10,7 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
     string internal constant _name = 'Uniswap V2';
     string private constant _symbol = 'UNI-V2';
     uint8 internal constant _decimals = 18;
-    uint  internal totalSupply;
+    uint  internal _totalSupply;
     mapping(address => uint) internal _balanceOf;
     mapping(address => mapping(address => uint)) internal _allowance;
 
